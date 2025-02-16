@@ -1,8 +1,9 @@
 import yaml
 import os
 
-# Define dataset paths
-dataset_root = "/Users/raysmacbookair/dataset"
+current_file_path = os.path.abspath(__file__)
+current_dir = os.path.dirname(current_file_path)
+dataset_root = current_dir + "/dataset"
 
 data = {
     "path": dataset_root,

@@ -3,6 +3,10 @@ import cv2
 import numpy as np
 import glob
 
+current_file_path = os.path.abspath(__file__)
+current_dir = os.path.dirname(current_file_path)
+dataset_root = current_dir + "/dataset"
+
 # =======================
 # Configuration variables
 # =======================
@@ -10,8 +14,8 @@ APPROX_FACTOR = 0.002                  # Lower value = more sensitive polygon ap
 MIN_CONTOUR_AREA = 100                  # Ignore contours with an area smaller than this (in pixels)
 IMG_WIDTH, IMG_HEIGHT = 1024, 1024       # Dimensions of the mask images
 
-INPUT_FOLDER = "/Users/raysmacbookair/dataset/masks/test"          # Folder containing mask images (e.g., PNG files)
-OUTPUT_FOLDER = "/Users/raysmacbookair/dataset/labels/test"         # Folder to save the TXT files and generated mask images
+INPUT_FOLDER = dataset_root + "/masks/test"          # Folder containing mask images (e.g., PNG files)
+OUTPUT_FOLDER = dataset_root + "/labels/test"         # Folder to save the TXT files and generated mask images
 
 def fill_polygons(polygons, width, height):
     """
