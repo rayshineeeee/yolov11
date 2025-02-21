@@ -7,7 +7,7 @@ dataset_root = current_dir + "/dataset"
 
 model = YOLO(current_dir+"/yolo11n_custom.pt")
 
-results = model(dataset_root + "/images/test/6_00199_l.png") 
+results = model(dataset_root + "/images/test") 
 
 # # Access the results
 # for result in results:
