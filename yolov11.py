@@ -32,8 +32,8 @@ train_results = model.train(
 metrics = model.val()
 
 # Perform object detection on an image
-results = model(dataset_root + "/images/test/6_00001_l.jpg")
-results[0].show()
+# results = model(dataset_root + "/images/test/6_00001_l.jpg")
+# results[0].show()
 
 # Export the model to ONNX format
 path = model.export(format="onnx")  # return path to exported model

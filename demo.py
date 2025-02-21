@@ -5,7 +5,7 @@ current_file_path = os.path.abspath(__file__)
 current_dir = os.path.dirname(current_file_path)
 dataset_root = current_dir + "/dataset"
 
-model = YOLO(current_dir+"/yolo11n_custom.pt")
+model = YOLO(current_dir+"/runs/segment/train2/weights/best.pt")
 
 results = model(dataset_root + "/images/test") 
 
