@@ -23,8 +23,9 @@ print(f"Total system RAM: {ram_memory:.2f} GB")
 train_results = model.train(
     workers=8,
     data=dataset_root + "/dataset.yaml",  # path to dataset YAML
-    epochs=50,  # number of training epochs
+    epochs=150,  # number of training epochs
     imgsz=1024,  # training image size
+    batch=32,
     device= "cuda",  # device to run on, i.e. device=0 or device=0,1,2,3 or device=cpu
 )
 
